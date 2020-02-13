@@ -11,5 +11,4 @@ before_install:
   - docker build -t jitrogith/awsec2-docker -f Dockerfile.dev .
 
 script:
-  - docker run jitrogith/awsec2-docker 
-#npm run test -- --coverage
+  - docker run -e CI=true jitrogith/awsec2-docker npm run test
