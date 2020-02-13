@@ -1,9 +1,11 @@
-language: generic
-services:
-  - docker
+language: node_js
+node_js:
+  - 11.6.0
+cache: npm 
 
-before_install:
-  - docker build -t jitrogith/awsec2-docker -f Dockerfile.dev .
+install:
+  - npm install
 
 script:
-  - docker run jitrogith/awsec2-docker npm run test -- --coverage
+  - npm run test
+  - npm run build
