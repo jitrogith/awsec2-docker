@@ -21,3 +21,6 @@ nvm install node
 
 #React:
 npx create-react-app frontend
+npm run build
+npm run test
+npm run start
