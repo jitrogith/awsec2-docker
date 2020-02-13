@@ -1,4 +1,4 @@
-sudo: required
+language: generic
 services:
   - docker
 
@@ -7,4 +7,3 @@ before_install:
 
 script:
   - docker run jitrogith/awsec2-docker npm run test -- --coverage
-
