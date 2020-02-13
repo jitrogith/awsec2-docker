@@ -5,9 +5,6 @@ sudo yum update -y
 sudo yum install -y docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
-Docker version 17.09.1-ce, build
-Docker installed successfully.
-Install Docker-Compose. Get the latest one from here https://github.com/docker/compose/releases
 curl -L https://github.com/docker/compose/releases/download/1.20.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
@@ -21,6 +18,7 @@ nvm install node
 
 #React:
 npx create-react-app frontend
+cd frontend
 npm run build
 npm run test
 npm run start
